@@ -8,8 +8,10 @@ A basic grunt sample code to join javascript or css files. In addition, we also 
 
 -Clone my files from git. "git clone https://github.com/KiqueDev/grunt_sample.git"  
 -Go to directory grunt_sample. "cd grunt_sample"  
+-Install all the dependecies from package.json. "npm install"  
 -Run grunt.   "grunt"  
 
+Modify the Gruntfile.js for your use.
 
 It should create the following files. In css folder: complete.css and complete.min.css  
                                           js folder: complete.js and complete.min.js  
