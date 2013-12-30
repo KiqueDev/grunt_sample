@@ -1,40 +1,34 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
-		concat: {
-			js: {
-				dest: "js/complete.js",
-				src: ["src/js/*.js"]
-			},
-			css: {
-				dest: "css/complete.css",
-				src: ["src/css/*.css"]
-			}
+		pkg: grunt.file.readJSON("package.json"),
+		handlebars:{
+	    compile: {
+	    	files: {
+	    		"results/complete.hbs.js": "src/templates/*.hbs"
+	    	}
+	    }
 		},
 		uglify: {
-			options: {
-      			mangle: true
-    		},
-			js: {
-				dest: 'js/complete.min.js',
-				src: 'js/complete.js'
-				
+			my_target: {
+				files: {
+					"results/complete.min.js": "src/js/*.js"
+				}
 			}
 		},
 		cssmin: {
-			css: {
-				dest: 'css/complete.min.css',
-				src: 'css/complete.css'
-				
+			combine: {
+				files: {
+					"results/complete.min.css": "src/css/*.css"
+				}
 			}
 		}
 	});
 
 	// Load npm tasks
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-css');
+	grunt.loadNpmTasks("grunt-contrib-handlebars");
+	grunt.loadNpmTasks("grunt-contrib-uglify");
+	grunt.loadNpmTasks("grunt-contrib-cssmin");
 
 	// A very basic default task.
-	grunt.registerTask('default', ['concat', 'uglify', 'cssmin']);
+	grunt.registerTask("default", ["handlebars", "uglify", "cssmin"]);
 }

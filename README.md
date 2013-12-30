@@ -15,3 +15,8 @@ Modify the Gruntfile.js for your use.
 
 It should create the following files. In css folder: complete.css and complete.min.css  
                                           js folder: complete.js and complete.min.js  
+
+## HandleBars usage
+>  var template = JST["src/templates/..hbs"];
+>  var html = template({data:data});
+>  $(selTarget).html(html);
