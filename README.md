@@ -17,6 +17,6 @@ It should create the following files. In css folder: complete.css and complete.m
                                           js folder: complete.js and complete.min.js  
 
 ## HandleBars usage
->  var template = JST["src/templates/..hbs"];
->  var html = template({data:data});
->  $(selTarget).html(html);
+>  var template = JST["src/templates/..hbs"];  
+>  var html = template({data:data});  
+>  $(selTarget).html(html);  
