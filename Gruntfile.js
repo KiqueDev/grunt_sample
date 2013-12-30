@@ -16,14 +16,16 @@ module.exports = function(grunt) {
       			mangle: true
     		},
 			js: {
-				src: 'js/complete.js',
-				dest: 'js/complete.min.js'
+				dest: 'js/complete.min.js',
+				src: 'js/complete.js'
+				
 			}
 		},
 		cssmin: {
-			js: {
-				src: 'css/complete.css',
-				dest: 'css/complete.min.css'
+			css: {
+				dest: 'css/complete.min.css',
+				src: 'css/complete.css'
+				
 			}
 		}
 	});
